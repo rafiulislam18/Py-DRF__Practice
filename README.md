@@ -1,1 +1,1 @@
-# Python-Django-REST-Framework-Practice
+# Python Django REST Framework Practice
