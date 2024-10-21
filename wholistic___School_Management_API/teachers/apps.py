@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class SchoolApiWholisticConfig(AppConfig):
+class TeachersConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'school_api_wholistic'
+    name = 'teachers'
