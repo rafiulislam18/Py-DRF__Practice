@@ -4,6 +4,7 @@ from .models import Teacher
 from .serializers import TeacherSerializer
 
 
+# API view to retrieve list of all teachers
 @api_view(['GET'])
 def teacher_list(request):
     teachers = Teacher.objects.all()
