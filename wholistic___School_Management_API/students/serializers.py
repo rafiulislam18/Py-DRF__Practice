@@ -9,6 +9,6 @@ class StudentSerializer(serializers.ModelSerializer):
         fields = ['id', 'first_name', 'last_name', 'class_enrolled', 'date_of_birth']
 
     def validate_date_of_birth(self, value):
-        if value.year > 2010:
-            raise serializers.ValidationError("Student must be older than 14.")
+        if value.year > 2018:
+            raise serializers.ValidationError("Student must be older than 6.")
         return value
