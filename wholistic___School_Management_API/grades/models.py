@@ -1,6 +1,7 @@
 from django.db import models
 
 
+# Define Grade model
 class Grade(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     subject = models.CharField(max_length=100)
