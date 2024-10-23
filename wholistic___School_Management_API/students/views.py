@@ -7,7 +7,6 @@ from rest_framework import status
 
 # API view for handling Student data
 class StudentList(APIView):
-
     # GET method to retrieve all students list
     def get(self, request):
         students = Student.objects.all()
