@@ -1,6 +1,7 @@
 from django.db import models
 
 
+# Define Attendance model
 class Attendance(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     date = models.DateField()

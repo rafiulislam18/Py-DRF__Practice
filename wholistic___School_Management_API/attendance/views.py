@@ -2,6 +2,7 @@ from rest_framework import generics
 from .models import Attendance
 from .serializers import AttendanceSerializer
 
+
 # API view to list & create Attendance records
 class AttendanceListCreate(generics.ListCreateAPIView):
     queryset = Attendance.objects.all()
