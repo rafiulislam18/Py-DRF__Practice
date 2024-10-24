@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import Grade
+from .serializers import GradeSerializer
 
-# Create your views here.
+
+# ViewSet for CRUD on Grade
+class GradeViewSet(viewsets.ModelViewSet):
+    queryset = Grade.objects.all()
+    serializer_class = GradeSerializer
