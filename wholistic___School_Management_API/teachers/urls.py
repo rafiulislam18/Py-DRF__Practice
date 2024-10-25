@@ -3,6 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    # API endpoint - GET all teachers
+    # API endpoint - GET (all), POST on Teacher model
     path('', views.teacher_list_create, name='teacher_list'),
 ]
