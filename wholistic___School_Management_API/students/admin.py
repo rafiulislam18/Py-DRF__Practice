@@ -1,7 +1,8 @@
 from django.contrib import admin
 from .models import Student
 
-# Register Student model with custom admin configuration
+
+# Register Student model in admin with custom configuration
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'last_name', 'class_enrolled', 'date_of_birth')

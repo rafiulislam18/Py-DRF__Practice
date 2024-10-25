@@ -17,7 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('drf_get_oprtn.urls')),
+
+    # Configure URL for 'get_operation' app
+    path('', include('get_operation.urls')),
 ]

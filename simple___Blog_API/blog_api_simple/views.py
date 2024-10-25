@@ -8,11 +8,10 @@ from .permissions import IsAuthorOrReadOnly
 from rest_framework.permissions import IsAuthenticated
 
 
-
-
+# API view to handle GET (all) & POST requests for BlogPost model
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
-def blog_list(request):
+def blog_list_create(request):
     if request.method == 'GET':
         blogs = BlogPost.objects.all()
         serializer = BlogPostSerializer(blogs, many=True)
@@ -25,6 +24,7 @@ def blog_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+# API view to handle GET, PUT & DELETE requests for BlogPost model
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes([IsAuthorOrReadOnly])
 def blog_detail(request, pk):

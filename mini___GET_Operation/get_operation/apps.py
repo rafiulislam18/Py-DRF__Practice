@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class DrfGetOprtnConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'drf_get_oprtn'
+    name = 'get_operation'

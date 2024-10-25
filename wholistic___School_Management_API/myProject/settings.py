@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
 
-    # Apps
+    # Custom Apps
     'attendance',
     'students',
     'teachers',

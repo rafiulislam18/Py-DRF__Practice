@@ -21,10 +21,10 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
 
-# Configure Swagger/OpenAPI schema view for the API Documentation
+# Configure Swagger/OpenAPI schema view for the simple E-commerce API documentation
 schema_view = get_schema_view(
     openapi.Info(
-        title="E-Commerce API (Simple)",
+        title="E-commerce API (Simple)",
         default_version='v1'
     ),
     public=True,
@@ -33,8 +33,10 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # Configure URL for 'ecom_api_simple' app
     path('', include('ecom_api_simple.urls')),
 
-    # Swagger API documentation path
+    # Configure URL for Swagger UI
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger'),
 ]

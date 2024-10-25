@@ -4,9 +4,8 @@ from .serializers import StudentSerializer
 from rest_framework.renderers import JSONRenderer
 from django.http import HttpResponse, JsonResponse
 
-# Create your views here.
 
-# Single Student Data
+# To handle GET request for single student
 def student_detail(request, pk):
     stu = Student.objects.get(id=pk)
     serializer = StudentSerializer(stu)
@@ -17,7 +16,7 @@ def student_detail(request, pk):
     return JsonResponse(serializer.data)
 
 
-# All Student Data
+# To handle GET request for all students
 def student_list(request):
     stu = Student.objects.all()
     serializer = StudentSerializer(stu, many=True)

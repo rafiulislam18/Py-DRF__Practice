@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Grade
 
 
-# Register Grade model with custom admin configuration
+# Register Grade model in admin with custom configurations
 @admin.register(Grade)
 class GradeAdmin(admin.ModelAdmin):
     list_display = ('student', 'subject', 'score')

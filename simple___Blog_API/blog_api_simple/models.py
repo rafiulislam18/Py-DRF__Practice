@@ -1,6 +1,7 @@
 from django.db import models
 
 
+# Define BlogPost model
 class BlogPost(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()

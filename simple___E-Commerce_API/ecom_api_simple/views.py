@@ -5,9 +5,8 @@ from rest_framework.filters import SearchFilter
 from rest_framework.pagination import PageNumberPagination
 
 
-
-
-class ProductList(generics.ListCreateAPIView):
+# API view to list & create products
+class ProductListCreate(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     filter_backends = [SearchFilter]
@@ -15,8 +14,7 @@ class ProductList(generics.ListCreateAPIView):
     pagination_class = PageNumberPagination
 
 
-
+# API view to retrieve, update & delete any product
 class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-

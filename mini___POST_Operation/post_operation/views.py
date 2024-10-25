@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 
-# Create your views here.
+# To handle POST request to create student
 @csrf_exempt
 def student_create(request):
     if request.method == 'POST':

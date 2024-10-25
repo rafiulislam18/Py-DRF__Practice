@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 
-
+# Define serializer for Student model
 class StudentSerializer(serializers.Serializer):
     name = serializers.CharField(max_length=100)
     roll = serializers.IntegerField()

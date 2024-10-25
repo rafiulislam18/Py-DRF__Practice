@@ -5,7 +5,7 @@ from .serializers import StudentSerializer
 from rest_framework import status
 
 
-# API view for handling Student data
+# API view for handling GET (all) & POST requests on Student model
 class StudentList(APIView):
     # GET method to retrieve all students list
     def get(self, request):

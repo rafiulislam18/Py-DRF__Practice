@@ -21,7 +21,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
 
-# Configure Swagger/OpenAPI schema view for the Simple Medicine API
+# Configure Swagger/OpenAPI schema view for the simple Medicine API documentation
 schema_view = get_schema_view(
     openapi.Info(
         title="Medicine API (Simple)",
@@ -33,8 +33,10 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # # Configure URL for 'medicine_api_simple' app
     path('', include('medicine_api_simple.urls')),
 
-    # Swagger API documentation path
+    # Configure URL for Swagger UI
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger'),
 ]

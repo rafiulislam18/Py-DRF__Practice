@@ -3,6 +3,6 @@ from .views import StudentList
 
 
 urlpatterns = [
-    # API endpoint - POST, GET all students
+    # API endpoint - GET all students, POST
     path('students/', StudentList.as_view(), name='student_list'),
 ]

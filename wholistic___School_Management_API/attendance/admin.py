@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Attendance
 
+
 # Register the Attendance model with custom admin configurations
 @admin.register(Attendance)
 class AttendanceAdmin(admin.ModelAdmin):
