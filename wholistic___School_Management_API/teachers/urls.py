@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     # API endpoint - GET all teachers
-    path('', views.teacher_list, name='teacher_list'),
+    path('', views.teacher_list_create, name='teacher_list'),
 ]
