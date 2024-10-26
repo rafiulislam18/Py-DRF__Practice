@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 from .models import Class
 from .serializers import ClassSerializer
-from ..permissions.permissions import CustomIsAdminOrReadOnly  # Assuming custom permission as an example
+from permissions.permissions import CustomIsAdminOrReadOnly  # Assuming custom permission as an example
 
 
 # ViewSet for CRUD on Class model
