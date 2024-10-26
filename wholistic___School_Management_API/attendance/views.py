@@ -2,7 +2,7 @@ from rest_framework import generics
 from rest_framework.pagination import PageNumberPagination
 from .models import Attendance
 from .serializers import AttendanceSerializer
-from ..permissions.permissions import CustomIsAdminOrReadOnly
+from permissions.permissions import CustomIsAdminOrReadOnly
 
 
 # API view to list & create Attendance records (is admin or read-only, paginated list response)
