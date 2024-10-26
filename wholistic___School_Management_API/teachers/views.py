@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Teacher
 from .serializers import TeacherSerializer
-from ..permissions.permissions import CustomIsAdminOrReadOnly
+from permissions.permissions import CustomIsAdminOrReadOnly
 
 
 # API view to handle GET (all) & POST request for Teacher model (is admin or read-only)
