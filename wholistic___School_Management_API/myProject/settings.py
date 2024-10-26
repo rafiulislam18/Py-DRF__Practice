@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     # Packages
     'rest_framework',
     'rest_framework_simplejwt',
-    'drf_yasg',
 
     # Custom Apps
     'attendance',
