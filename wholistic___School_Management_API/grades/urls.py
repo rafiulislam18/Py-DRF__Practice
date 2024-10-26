@@ -4,6 +4,6 @@ from .views import GradeViewSet
 
 # Configure URL route for GradeViewSet
 router = DefaultRouter()
-router.register(r'grades', GradeViewSet)
+router.register(r'', GradeViewSet)
 
 urlpatterns = router.urls
