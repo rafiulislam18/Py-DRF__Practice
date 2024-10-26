@@ -21,6 +21,10 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    # Configure URL for 'teachers' app
+    # Configure URLs for custom apps
+    path('students/', include('students.urls')),
     path('teachers/', include('teachers.urls')),
+    path('attendance/', include('attendance.urls')),
+    path('grades/', include('grades.urls')),
+    path('users/', include('users.urls')),
 ]
