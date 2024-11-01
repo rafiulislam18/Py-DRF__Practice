@@ -5,7 +5,7 @@ from .views import ClassViewSet
 
 # Configure URL route for ClassViewSet
 router = DefaultRouter()
-router.register(r'classes', ClassViewSet)
+router.register(r'', ClassViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
