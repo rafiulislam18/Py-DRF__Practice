@@ -1,9 +1,8 @@
-from rest_framework.routers import DefaultRouter
-from .views import GradeViewSet
+from django.urls import path
+from .views import GradeView
 
-
-# Configure URL route for GradeViewSet
-router = DefaultRouter()
-router.register(r'', GradeViewSet)
-
-urlpatterns = router.urls
+urlpatterns = [
+    # API endpoint - CRUD on Grade model
+    path('grades/', GradeView.as_view(), name='grade_list_create'),
+    path('grades/<int:pk>/', GradeView.as_view(), name='grade_detail'),
+]
