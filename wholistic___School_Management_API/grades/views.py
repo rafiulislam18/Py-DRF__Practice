@@ -2,6 +2,7 @@ from rest_framework import mixins
 from rest_framework.generics import GenericAPIView
 from .models import Grade
 from .serializers import GradeSerializer
+from permissions.permissions import CustomIsAdminOrReadOnly
 
 
 # Mixin-based API view for CRUD on Grade model
@@ -13,6 +14,7 @@ class GradeView(mixins.ListModelMixin,
                  GenericAPIView):
     queryset = Grade.objects.all()
     serializer_class = GradeSerializer
+    permission_classes = [CustomIsAdminOrReadOnly]
 
     def get(self, request, *args, **kwargs):
         return self.list(request, *args, **kwargs)
