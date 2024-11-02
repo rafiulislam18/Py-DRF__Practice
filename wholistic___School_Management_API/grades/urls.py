@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import GradeView
+from . import views
+
 
 urlpatterns = [
-    # API endpoint - CRUD on Grade model
-    path('', GradeView.as_view(), name='grade_list_create'),
-    path('<int:pk>/', GradeView.as_view(), name='grade_detail'),
+    # API endpoints - CRUD on Grade model
+    path('', views.GradeListCreateView.as_view(), name='grade_list_create'),
+    path('<int:pk>/', views.GradeDetailView.as_view(), name='grade_detail'),
 ]
